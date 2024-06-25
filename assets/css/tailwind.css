@@ -1,0 +1,68 @@
+/* @import "/assets/css/toastification.css"; */
+/* @import "/assets/css/transition.css";
+@import "/assets/css/ios-time-picker.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50;
+}
+@layer components {
+  .btn {
+    @apply bg-[#12b488]
+text-white px-3 py-2 rounded-md text-sm
+text-white;
+    transition: all 300ms ease;
+  }
+  .btn:hover {
+    @apply bg-[#127f62];
+  }
+  .btn:active {
+    @apply bg-[#159370];
+  }
+  .card {
+    @apply p-3 rounded-md bg-white shadow-md h-full;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-enter-active {
+  animation: fade 0.3s ease-in-out;
+}
+.fade-leave-active {
+  animation: fade 0.3s ease-in-out reverse;
+}
+
+.fade-sm-enter-active {
+  animation: fade 0.2s ease-in-out;
+}
+.fade-sm-leave-active {
+  animation: fade 0.2s ease-in-out reverse;
+}
+
+.page-change-enter-active {
+  animation: page-change 200ms ease-out;
+}
+
+.page-change-leave-active {
+  animation: page-change 200ms ease-in reverse;
+}
+
+@keyframes page-change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
